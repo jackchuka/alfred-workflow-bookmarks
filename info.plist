@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>com.jackchuka.filemark</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -129,7 +129,7 @@
 	<key>createdby</key>
 	<string>jackchuka</string>
 	<key>description</key>
-	<string>Search &amp; Copy local bookmarks</string>
+	<string>Universal bookmark manager</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -210,6 +210,27 @@ cat $DIR_PATH/$FILENAME | grep . | jq -nR '{items: [inputs | split(" | ") | {tit
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:url}</string>
+				<key>title</key>
+				<string>Bookmark added</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>317B37C9-C0C0-489E-8BE3-79A7D50CA019</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -269,27 +290,6 @@ cat $DIR_PATH/$FILENAME | grep . | jq -nR '{items: [inputs | split(" | ") | {tit
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>76157567-1F60-4B4C-AFCE-F8A86842C2E5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:url}</string>
-				<key>title</key>
-				<string>Bookmark added</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>317B37C9-C0C0-489E-8BE3-79A7D50CA019</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -548,6 +548,6 @@ cp $orig $backup</string>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/jackchuka/alfred-workflow-bookmarks</string>
 </dict>
 </plist>
